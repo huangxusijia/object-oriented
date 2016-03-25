@@ -1,13 +1,10 @@
 #include"Print.h"
 using namespace std;
 
-void Print::printqueue(queue<string> que)
-{
-	int size = que.size(),i;   
-	if (!que.empty())
-	{
-		for (i=0;i<size;i++)
-		{
+void Print::printqueue(queue<string> que) {
+	int size = que.size(),i;
+	if (!que.empty()) { //Êä³ö¶ÓÁÐ
+		for (i=0; i<size; i++) {
 			cout << que.front() << endl;
 			que.pop();
 		}

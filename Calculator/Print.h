@@ -5,8 +5,7 @@
 using namespace std;
 
 
-class Print
-{
+class Print {
 	public:
 		void printqueue(queue<string> que);
 };

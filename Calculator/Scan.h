@@ -5,15 +5,14 @@
 #include<queue>
 using namespace std;
 
-class Scan
-{
+class Scan {
 	public:
-		bool Flag = true;   
-		void ToStringQueue(string input);  
-		queue<string> getqueue();  
-	
-		
+		bool Flag = true;//用于判断式子是否正确
+		void ToStringQueue(string input);  //接受式子
+		queue<string> getqueue();
+
+
 	private:
-		queue<string> inputqueue;   		
+		queue<string> inputqueue;
 };
 //#endif
