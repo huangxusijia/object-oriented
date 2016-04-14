@@ -3,29 +3,29 @@
 #include<string>
 #include<queue>
 using namespace std;
-
+#include<iostream>
 stack<char> symbol;//存放符号
 stack<int> cal;
 
-void calculation::Calculationqueue(string caque) {
+int calculation::Calculationqueue(queue<string> caque) {
 	string hz;//用于存放后缀运算符
 	int len,i;
-	int lenth=hz.size();
-	hz.clear();
-	for(i=0; i<lenth; i++) {
-		if(caque[i]!='+' && caque[i]!='-' caque[i]!='*' caque[i]!='/' caque[i]!='(' caque[i]!=')')
-			hz.push_back(caque[i]);
+	int lenth=caque.size();
+	//hz.clear();
+	for(i=0; i<caque.size(); i++) {
+		if(caque.front() != '+' && caque.front() !='-' && caque.front() !='*' && caque.front() !='/' && caque.front() !='(' && caque.front() !=')')//读入数字 
+			hz.push_back(caque.front());
 		else {
-			if(symbol.size()==0 || caque[i]=='(')
-				symbol.push(caque[i]);
+			if(symbol.size()==0 || caque.front()=='(')
+				symbol.push(caque.front());
 			else {
 				char tmp1 = symbol.top();
-				if (caque[i] == ')') {
+				if (caque.front() == ')') {
 					len = symbol.size();
 					while (len) {
 						char tmp = symbol.top();
 						symbol.pop();
-						if (tmp == '(')
+						if (tmp == '(') 
 							break;
 						else
 							hz.push_back(tmp);
@@ -33,22 +33,23 @@ void calculation::Calculationqueue(string caque) {
 					}
 				} else {
 					if (tmp1 == '*' || tmp1 == '/') {
-						if (caque[i] == '*' || caque[i] == '/')
-							symbol.push(caque[i]);
+						if (caque.front() == '*' || caque.front() == '/')
+							symbol.push(caque.front());
 						else {
 							len = symbol.size();
 							while (len) {
-								char tmp = s.top();
+								char tmp = symbol.top();
 								hz.push_back(tmp);
 								symbol.pop();
 								len--;
 							}
-							symbol.push(caque[i]);
+							symbol.push(caque.front());
 						}
 					}
 					}
 				}
 			}
+			caque.pop();
 		}
 		//用后缀运算符运算
 		int temp1, temp2, temp3; 
@@ -63,7 +64,7 @@ void calculation::Calculationqueue(string caque) {
                    temp1 = cal.top();
                    cal.pop();
                    temp2 = cal.top();
-                   ss.pop(); 
+                   cal.pop(); 
                    if (hz[i] == '+'){
                        temp3 = temp2 + temp1; 
                    }
@@ -79,11 +80,5 @@ void calculation::Calculationqueue(string caque) {
                    cal.push(temp3); 
               }
           }
+          return cal.pop();
     }
-	  
-queue<string> calculation::cagetqueue() {
-	return cal.top();
-}
-
-
-

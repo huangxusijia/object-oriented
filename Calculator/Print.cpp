@@ -10,8 +10,5 @@ void Print::printqueue(queue<string> que) {
 		}
 	}
 }
-void Print::caprintqueue(string cal)
-{
-	cout << cal.top(); 
-}
+
 

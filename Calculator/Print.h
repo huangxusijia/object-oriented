@@ -7,6 +7,5 @@ using namespace std;
 class Print {
 	public:
 		void printqueue(queue<string> que);
-		void caprintqueue(string cal);
 };
 //#endif

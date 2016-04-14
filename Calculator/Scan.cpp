@@ -2,6 +2,7 @@
 using namespace std;
 
 void Scan::ToStringQueue(string input) {
+	Flag = true;
 	string fuhao; //用于储存符号
 	string num="";
 	int count,i;  //count 用于判断位数
@@ -42,3 +43,4 @@ void Scan::ToStringQueue(string input) {
 queue<string> Scan::getqueue() {
 	return inputqueue;
 }
+

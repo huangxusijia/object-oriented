@@ -7,7 +7,7 @@ using namespace std;
 class calculation
 {
 	public:
-		void Calculationqueue(queue<string> caque);
+		int Calculationqueue(queue<string> caque);
 };
 
 

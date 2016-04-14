@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 #include"Scan.h"
 #include"Print.h"
 #include"calculation.h"
@@ -10,11 +11,9 @@ int main() {
 	Scan get;
 	get.ToStringQueue(input);
 	queue<string> g=get.getqueue();
-	calculation caget;
-	caget.Calculationqueue(input);
-	queue<string> f=caget.cagetqueue();
 	Print out;
-	//out.printqueue(g);
-	out.caprintqueue(f);
+	calculation cal;
+	int l=cal.Calculationqueue(g); 
+	cout << l;
 	return 0;
 }
