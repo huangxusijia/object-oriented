@@ -1,5 +1,3 @@
-//#ifndef SCAN_H
-//#define SCAN_H
 #include<iostream>
 #include<string>
 #include<queue>
@@ -15,4 +13,4 @@ class Scan {
 	private:
 		queue<string> inputqueue;
 };
-//#endif
+

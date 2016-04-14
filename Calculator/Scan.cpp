@@ -18,7 +18,8 @@ void Scan::ToStringQueue(string input) {
 
 		else if (input[i] >= '0' && input[i] <= '9' || input[i] == '.') { //(附表中48到57分别对应0-9,string需要用到此判断,可以用'0''9'以免记错ASCII)
 			count++;//判断位数
-			if (count>10) {
+			if (count>10) 
+			{
 				cout << "Error" << endl;
 				Flag = false;
 				break;

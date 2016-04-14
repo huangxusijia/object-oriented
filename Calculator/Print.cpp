@@ -5,8 +5,13 @@ void Print::printqueue(queue<string> que) {
 	int size = que.size(),i;
 	if (!que.empty()) { //йДЁЖ╤сап
 		for (i=0; i<size; i++) {
-			cout << que.front() << endl;
+			cout << que.front();
 			que.pop();
 		}
 	}
 }
+void Print::caprintqueue(string cal)
+{
+	cout << cal.top(); 
+}
+
