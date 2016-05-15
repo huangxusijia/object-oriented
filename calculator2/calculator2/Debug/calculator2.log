@@ -1,0 +1,3 @@
+﻿  Scan.cpp
+c:\users\黄旭\desktop\vs 031502311\calculator2\calculator2\scan.cpp(15): warning C4018: “<”: 有符号/无符号不匹配
+  calculator2.vcxproj -> C:\Users\黄旭\Desktop\vs 031502311\calculator2\Debug\calculator2.exe
