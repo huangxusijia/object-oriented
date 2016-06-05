@@ -146,11 +146,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cal.cpp" />
     <ClCompile Include="calculator.cpp" />
     <ClCompile Include="Print.cpp" />
     <ClCompile Include="Scan.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cal.h" />
     <ClInclude Include="Print.h" />
     <ClInclude Include="Scan.h" />
   </ItemGroup>

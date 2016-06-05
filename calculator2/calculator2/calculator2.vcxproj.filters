@@ -24,12 +24,18 @@
     <ClCompile Include="Print.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="cal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scan.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Print.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cal.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
